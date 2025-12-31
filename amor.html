@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            background-color: blanchedalmond;
+        }
+
+        .card{
+            border: solid 2px black;
+            width: 300px;
+            height: 150px;
+            padding: 20px 20px 20px 20px;
+            background-color: antiquewhite;
+            text-align: center;
+            margin: 50px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .hero{
+            background-color: lightgray;
+            padding: 50px;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin: 0%;
+        }
+        .hero-content h1{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .hero-content *{
+            background-color: lightgray;
+        }
+        .hero-content{
+            background-color: lightgray;
+        }
+
+        #bonito{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        #feel{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 17px;
+            text-align: center;
+            color: darkblue;
+        }
+
+        #frase1, #frase2, #frase3, #frase4{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Para el amor de mi vida</h1>
+                <p id="bonito">¿Cómo te sientes hoy?</p>
+        </div>
+    </header>
+
+    <div class="card" onclick="feliz()">
+        <p id="feel">¡Feliz!</p>
+        <p id="frase1"></p>
+    </div>
+
+    <div class="card" onclick="triste()">
+        <p id="feel">Triste</p>
+        <p id="frase2"></p>
+    </div>
+
+    <div class="card" onclick="enojada()">
+        <p id="feel">Enojada</p>
+        <p id="frase3"></p>
+    </div>
+
+    <div class="card" onclick="angustiada()">
+        <p id="feel">Angustiada</p>
+        <p id="frase4"></p>
+    </div>
+
+
+    <script>
+
+function feliz() {
+    const frasesf = [
+        "Salmos 118:24 Hoy es un regalo de Dios. Disfrútalo y alégrate.",
+        "Proverbios 17:22 Un corazón alegre ayuda a sentirse mejor.",
+        "Salmos 37:4 Cuando disfrutas estar con Dios, Él cuida tus deseos.",
+    ];
+
+    const fraseRandomf = frasesf[Math.floor(Math.random() * frasesf.length)];
+
+    document.getElementById("frase1").textContent = fraseRandomf;
+}
+
+function triste() {
+    const frasest = [
+        "Salmos 34:18 Dios está cerca de los que tienen el corazón triste.",
+        "Mateo 11:28 Si estás cansado o triste, ven a mí y yo te daré descanso.",
+        "Juan 14:27 Te dejo mi paz. No tengas miedo ni te angusties.",
+    ];
+
+    const fraseRandomt = frasest[Math.floor(Math.random() * frasest.length)];
+
+    document.getElementById("frase2").textContent = fraseRandomt;
+}
+
+function enojada() {
+    const frasese = [
+        "Efesios 4:26 Está bien enojarse, pero no hagas cosas malas por enojo.",
+        "Proverbios 15:1 Hablar con calma evita problemas.",
+        "Eclesiastés 7:9 No te enojes rápido; eso solo trae problemas.",
+    ];
+
+    const fraseRandome = frasese[Math.floor(Math.random() * frasese.length)];
+
+    document.getElementById("frase3").textContent = fraseRandome;
+}
+
+function angustiada() {
+    const frasesa = [
+        "Salmos 55:22 Entrégale tus preocupaciones a Dios; Él te ayudará.",
+        "Isaías 41:10 No tengas miedo, yo estoy contigo y te doy fuerzas.",
+        "Filipenses 4:6–7 No te preocupes tanto; habla con Dios y Él te dará paz.",
+    ];
+
+    const fraseRandoma = frasesa[Math.floor(Math.random() * frasesa.length)];
+
+    document.getElementById("frase4").textContent = fraseRandoma;
+}
+
+</script>
+
+</body>
+</html>
