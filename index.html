@@ -46,18 +46,72 @@
             font-size: 20px;
         }
 
-        #feel{
+        #feelf, #feelt, #feele, #feela, #feeles, #feels, #feelm, #feelfz, #feela{
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 17px;
             text-align: center;
-            color: darkblue;
         }
 
-        #frase1, #frase2, #frase3, #frase4{
+        #feels{
+            color: white;
+        }
+
+        #frase1, #frase2, #frase3, #frase4, #frase5, #frase6, #frase7, #frase8, #frase9{
             font-family: 'Times New Roman', Times, serif;
             text-align: center;
             margin-top: 10px;
         }
+
+        #feliz, #feliz p{
+            background-color: lightyellow;
+        }
+
+        #triste, #triste p{
+            background-color: lightblue;
+        }
+
+        #enojada, #enojada p{
+            background-color: lightcoral;
+        }
+
+        #angustiada, #angustiada p{
+            background-color: lightslategray;
+        }
+
+        #esperanza, #esperanza p{
+            background-color: lightgreen;
+        }
+
+        #sola, #sola p{
+            background-color: purple;
+        }
+
+        #miedo, #miedo p{
+            background-color: darkgrey;
+        }
+
+        #fuerza, #fuerza p{
+            background-color: lightsalmon;
+        }
+
+        #amor, #amor p{
+            background-color: pink;
+        }
+
+        footer, #foot p{
+            background-color: lightgray;
+            padding: 10px;
+            text-align: center;
+            border-top: 2px solid black;
+            margin: 0%;
+        }
+
+        #bello{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            color: darkblue;
+        }
+
     </style>
 
 </head>
@@ -71,26 +125,55 @@
         </div>
     </header>
 
-    <div class="card" onclick="feliz()">
-        <p id="feel">¡Feliz!</p>
+    <div class="card" id="feliz" onclick="feliz()">
+        <p id="feelf">¡Feliz!</p>
         <p id="frase1"></p>
     </div>
 
-    <div class="card" onclick="triste()">
-        <p id="feel">Triste</p>
+    <div class="card" id="triste" onclick="triste()">
+        <p id="feelt">Triste</p>
         <p id="frase2"></p>
     </div>
 
-    <div class="card" onclick="enojada()">
-        <p id="feel">Enojada</p>
+    <div class="card" id="enojada" onclick="enojada()">
+        <p id="feele">Enojada</p>
         <p id="frase3"></p>
     </div>
 
-    <div class="card" onclick="angustiada()">
-        <p id="feel">Angustiada</p>
+    <div class="card" id="angustiada" onclick="angustiada()">
+        <p id="feela">Angustiada</p>
         <p id="frase4"></p>
     </div>
 
+    <div class="card" id="esperanza" onclick="esperanza()">
+        <p id="feeles">Esperanza</p>
+        <p id="frase5"></p>
+    </div>
+
+    <div class="card" id="sola" onclick="sola()">
+        <p id="feels">Sola</p>
+        <p id="frase6"></p>
+    </div>
+
+    <div class="card" id="miedo" onclick="miedo()">
+        <p id="feelm">Miedo</p>
+        <p id="frase7"></p>
+    </div>
+
+    <div class="card" id="fuerza" onclick="fuerza()">
+        <p id="feelfz">Cuando necesites fuerza</p>
+        <p id="frase8"></p>
+    </div>
+
+    <div class="card" id="amor" onclick="amor()">
+        <p id="feela">Amor</p>
+        <p id="frase9"></p>
+    </div>
+
+    <footer id="foot">
+        <hr>
+        <p id="bello">Para ti mi princesa hermosa!</p>
+    </footer>
 
     <script>
 
@@ -99,6 +182,10 @@ function feliz() {
         "Salmos 118:24 Hoy es un regalo de Dios. Disfrútalo y alégrate.",
         "Proverbios 17:22 Un corazón alegre ayuda a sentirse mejor.",
         "Salmos 37:4 Cuando disfrutas estar con Dios, Él cuida tus deseos.",
+        "Salmos 100:2 Sirve a Dios con alegría y ven con gozo delante de Él.",
+        "Eclesiastés 3:12 No hay nada mejor que alegrarse y disfrutar la vida.",
+        "Salmos 21:6 Dios llena tu corazón de alegría con su presencia.",
+        "Nehemías 8:10 La alegría que viene de Dios te da fuerzas.",
     ];
 
     const fraseRandomf = frasesf[Math.floor(Math.random() * frasesf.length)];
@@ -111,6 +198,11 @@ function triste() {
         "Salmos 34:18 Dios está cerca de los que tienen el corazón triste.",
         "Mateo 11:28 Si estás cansado o triste, ven a mí y yo te daré descanso.",
         "Juan 14:27 Te dejo mi paz. No tengas miedo ni te angusties.",
+        "Salmos 30:5 El llanto dura un momento, pero la alegría vuelve.",
+        "Salmos 147:3 Dios sana los corazones heridos.",
+        "Isaías 41:13 Dios te sostiene con su mano poderosa.",
+        "2 Corintios 1:3–4 Dios nos consuela en todas nuestras tristezas.",
+
     ];
 
     const fraseRandomt = frasest[Math.floor(Math.random() * frasest.length)];
@@ -123,6 +215,10 @@ function enojada() {
         "Efesios 4:26 Está bien enojarse, pero no hagas cosas malas por enojo.",
         "Proverbios 15:1 Hablar con calma evita problemas.",
         "Eclesiastés 7:9 No te enojes rápido; eso solo trae problemas.",
+        "Proverbios 19:11 Ser paciente demuestra inteligencia; perdonar es sabio.",
+        "Colosenses 3:8 Deja atrás la ira y la malicia.",
+        "Proverbios 14:29 El que se controla es sabio; el impulsivo comete errores.",
+        "Santiago 1:19 Sé rápido para escuchar, lento para hablar y lento para enojarte.",
     ];
 
     const fraseRandome = frasese[Math.floor(Math.random() * frasese.length)];
@@ -135,6 +231,10 @@ function angustiada() {
         "Salmos 55:22 Entrégale tus preocupaciones a Dios; Él te ayudará.",
         "Isaías 41:10 No tengas miedo, yo estoy contigo y te doy fuerzas.",
         "Filipenses 4:6–7 No te preocupes tanto; habla con Dios y Él te dará paz.",
+        "Salmos 94:19 Cuando la ansiedad me invade, tu paz me tranquiliza.",
+        "1 Pedro 5:7 Dios cuida de ti; confía en Él.",
+        "Salmos 61:2 Cuando mi corazón se siente débil, tú me das refugio.",
+        "Isaías 26:3 Tú das paz a quien confía en ti.",
     ];
 
     const fraseRandoma = frasesa[Math.floor(Math.random() * frasesa.length)];
@@ -142,8 +242,82 @@ function angustiada() {
     document.getElementById("frase4").textContent = fraseRandoma;
 }
 
+function esperanza() {
+    const frasesesp = [
+        "",
+    ];
+
+    const fraseRandomesp = frasesesp[Math.floor(Math.random() * frasesesp.length)];
+
+    document.getElementById("frase5").textContent = fraseRandomesp;
+}
+
+function esperanza() {
+    const frasesesp = [
+        "Salmos 42:5 Aunque te sientas triste, vuelve a confiar en Dios; Él te ayudará.",
+        "Romanos 8:24–25 La esperanza nos enseña a esperar con paciencia.",
+        "Proverbios 23:18 Tu futuro será bueno y tu esperanza no se perderá.",
+        "Lamentaciones 3:22–23 El amor de Dios nunca se acaba; cada día se renueva.",
+    ];
+
+    const fraseRandomesp = frasesesp[Math.floor(Math.random() * frasesesp.length)];
+
+    document.getElementById("frase5").textContent = fraseRandomesp;
+}
+
+function sola() {
+    const frasess = [
+        "Salmos 25:16 Mírame y ten compasión de mí, porque me siento solo.",
+        "Isaías 41:13 Yo te tomo de la mano y te digo: no tengas miedo.",
+        "Salmos 139:7–10 No importa a dónde vaya, tú siempre estás conmigo.",
+        "Hebreos 13:5 Nunca te dejaré ni te abandonaré.",
+    ];
+
+    const fraseRandoms = frasess[Math.floor(Math.random() * frasess.length)];
+
+    document.getElementById("frase6").textContent = fraseRandoms;
+}
+
+function miedo() {
+    const frasesm = [
+        "Salmos 112:7 No tendrá miedo de malas noticias, porque confía en Dios.",
+        "Isaías 12:2 Dios es mi salvación; confiaré y no tendré miedo.",
+        "Salmos 91:5 No tendrás miedo ni de día ni de noche.",
+        "Timoteo 1:7 Dios no nos dio un espíritu de miedo, sino de fuerza y amor.",
+    ];
+
+    const fraseRandomm = frasesm[Math.floor(Math.random() * frasesm.length)];
+
+    document.getElementById("frase7").textContent = fraseRandomm;
+}
+
+function fuerza() {
+    const frasesfz = [
+        "Salmos 73:26 Aunque me falten fuerzas, Dios es mi fortaleza.",
+        "Isaías 40:29 Él da fuerzas al cansado.",
+        "Salmos 18:32 Dios es quien me da fuerzas y me cuida.",
+        "Filipenses 4:13 Todo lo puedo con la fuerza que Dios me da.",
+    ];
+
+    const fraseRandomfz = frasesfz[Math.floor(Math.random() * frasesfz.length)];
+
+    document.getElementById("frase8").textContent = fraseRandomfz;
+}
+
+function amor() {
+    const frasesa = [
+        "1 Corintios 13:4–7 El amor es paciente y amable. No es celoso ni orgulloso. No lastima ni guarda rencor. Se alegra con la verdad. Todo lo soporta, todo lo cree, todo lo espera y todo lo aguanta.",
+        "1 Juan 4:19 Amamos porque Dios nos amó primero.",
+        "Romanos 8:38–39 Nada puede separarnos del amor de Dios.",
+        "Juan 15:12 Ámense unos a otros como yo los he amado.",
+    ];
+
+    const fraseRandoma = frasesa[Math.floor(Math.random() * frasesa.length)];
+
+    document.getElementById("frase9").textContent = fraseRandoma;
+}
+
 </script>
 
 </body>
 </html>
-
