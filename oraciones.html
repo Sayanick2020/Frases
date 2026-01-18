@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oraciones</title>
+    <style>
+        *{
+            background-color: blanchedalmond;
+        }
+        .hero{
+            background-color: lightgray;
+            padding: 50px;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin: 0%;
+        }
+        .hero-content h1{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .hero-content *{
+            background-color: lightgray;
+        }
+        .hero-content{
+            background-color: lightgray;
+        }
+        #titulo{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        #oracion{
+            border: double;
+            border-radius: 8px;
+            border-color: darkblue;
+            background-color: white;
+        }
+        </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Habla con Dios</h1>
+                <p id="bonito">Has la oración que más necesites</p>
+                <p>(No hay nada mejor que el amor de Dios)</p>
+        </div>
+    </header>
+
+    <br>
+
+     <select id="selector" onchange="mostrarOracion()">
+        <option value="">-- Elige una opción --</option>
+        <option value="inicio">Oración para iniciar el día</option>
+        <option value="ansiedad">Oración en momentos de ansiedad o inquietud</option>
+        <option value="espiritu">Oración al Espíritu Santo</option>
+        <option value="fin">Antes de dormir</option>
+    </select>
+
+    <br> <br>
+
+    <div id="oracion" class="oracion"></div>
+
+    <script>
+        function mostrarOracion() {
+            const seleccion = document.getElementById("selector").value;
+            const contenedor = document.getElementById("oracion");
+
+            let texto = "";
+
+            if (seleccion === "inicio") {
+                texto = "Señor, te doy gracias por este nuevo día. Guía mis pasos, mis palabras y mis acciones. Que todo lo que haga sea conforme a tu voluntad. Amén.";
+            } 
+            else if (seleccion === "espiritu") {
+                texto = "Espíritu Santo, ilumina mi mente, fortalece mi corazón y guíame en cada decisión. Dame sabiduría para actuar y palabras para hablar. Amén.";
+            }
+
+            else if (seleccion === "ansiedad") {
+            texto = "Jesús, mi corazón se siente agitado y mis pensamientos no descansan. Toma tú lo que no puedo controlar y dame tu paz. Confío en que tu estás conmigo aun cuando no entiendo lo que pasa. En ti descanso. Amén.";
+            } 
+            else if (seleccion === "fin") {
+                texto = "Angelito de mi guarda, de mi dulce compañia, no me desampares ni de noche ni de dia, hasta que me dejes en los brazos de Jesús, José y María; Dulce madre no te alejes, tu vista de mi no apartes, ven conmigo a todas partes y solo nunca me dejes, ya que me proteges como verdadera madre has que me bendiga, el padre, el hijo y el espiritú santo. Amén.";z
+            }
+
+            if (texto !== "") {
+                contenedor.style.display = "block";
+                contenedor.innerText = texto;
+            } else {
+                contenedor.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
